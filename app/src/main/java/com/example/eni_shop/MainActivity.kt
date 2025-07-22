@@ -17,15 +17,16 @@ import com.example.eni_shop.repository.ArticleRepository
 import com.example.eni_shop.ui.theme.ENISHOPTheme
 import java.util.Date
 
+private const val TAG = "MainActivity"
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             ENISHOPTheme {
-                val repository = ArticleRepository()
+                val repository = ArticleRepository
                 val article1 = repository.getArticle(2L)
-                println("Article récupéré : $article1")
+                Log.d(TAG, "Article récupéré : $article1")
                 val newArticle = Article(
                     id = 0L,
                     name = "Fauteuil",
@@ -36,9 +37,9 @@ class MainActivity : ComponentActivity() {
                     date = Date()
                 )
                 val newId = repository.addArticle(newArticle)
-                println("Nouvel article ajouté avec id : $newId")
+                Log.d(TAG, "Nouvel article ajouté avec id : $newId")
                 val article2 = repository.getArticle(newId)
-                println("Article inséré : $article2")
+                Log.d(TAG, "Article inséré : $article2")
             }
         }
     }
