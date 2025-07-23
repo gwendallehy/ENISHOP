@@ -1,5 +1,6 @@
 //Créer le model Article dans le package bo
 package com.example.eni_shop.bo
+import java.time.LocalDate
 import java.util.Date
 data class Article(
     var id: Long,
