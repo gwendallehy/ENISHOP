@@ -18,6 +18,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.eni_shop.bo.Article
 import com.example.eni_shop.repository.ArticleRepository
 import com.example.eni_shop.ui.common.EniShopTopBar
+import com.example.eni_shop.ui.screen.ArticleCreate
+import com.example.eni_shop.ui.screen.ArticleCreateScreen
 import com.example.eni_shop.ui.screen.ArticleDetailScreen
 import com.example.eni_shop.ui.theme.ENISHOPTheme
 import java.time.LocalDate
@@ -29,8 +31,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ENISHOPTheme {
-                ArticleDetailScreen()
-
+//                ArticleDetailScreen()
+                ArticleCreateScreen()
             }
         }
     }

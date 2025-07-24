@@ -16,13 +16,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.eni_shop.bo.Article
 import com.example.eni_shop.repository.ArticleRepository
 import com.example.eni_shop.ui.common.EniShopTopBar
-import com.example.eni_shop.ui.common.toFrenchFormat
+import com.example.eni_shop.ui.theme.toFrenchFormat
 
 @Composable
 fun ArticleDetailScreen(modifier: Modifier = Modifier) {
